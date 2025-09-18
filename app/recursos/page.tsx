@@ -14,9 +14,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Recursos de Aprendizaje | G113 - IA Básico",
   description:
-    "Materiales de la Misión 2: diapositivas de machine learning, documentos para diligenciar, herramientas de IA y recursos para aprender regresión logística y lineal.",
+    "Materiales de la Misión 1: diapositivas de fundamentos de IA, documentos para diligenciar, herramientas de IA y recursos para aprender fundamentos de IA.",
   openGraph: {
-    title: "📚 Recursos de IA - Misión 2 Machine Learning",
+    title:
+      "📚 Recursos de IA - Misión 1 Fundamentos de Inteligencia Artificial",
     description:
       "Accede a materiales de machine learning, diapositivas de regresión, documentos de proyecto y herramientas esenciales para IA.",
     images: [
@@ -237,11 +238,12 @@ export default function Recursos() {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                  Misión 2: Aplicación de Machine Learning
+                  Misión 1: Fundamentos de Inteligencia Artificial
                 </span>
               </h3>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Materiales para aplicar técnicas de regresión logística y lineal
+                Materiales para aprender fundamentos de IA y herramientas para
+                creacion de aplicaciones web y chatbots
               </p>
             </div>
 
@@ -256,26 +258,25 @@ export default function Recursos() {
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-white">
-                          Diapositivas Misión 2
+                          Recursos Misión 1
                         </h4>
                         <span className="text-sm text-orange-400">
-                          Presentación
+                          Acceso a google drive
                         </span>
                       </div>
                     </div>
                   </div>
                   <p className="text-gray-400 mb-4 flex-grow">
-                    Material teórico sobre regresión logística y lineal para
-                    machine learning
+                    Materiales para aprender fundamentos de IA
                   </p>
                   <a
-                    href="https://collection.cloudinary.com/djrdozcdw/e1f7529fad52434a3c911fba665b7e03"
+                    href="https://drive.google.com/drive/folders/1KKovXhlPRvKOmvNMwEfwSP1zmtl_GhgS?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/25"
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    Descargar Diapositivas
+                    Acceso a google drive
                   </a>
                 </div>
               </div>
@@ -290,7 +291,7 @@ export default function Recursos() {
                       </div>
                       <div>
                         <h4 className="text-lg font-semibold text-white">
-                          Base Proyecto IA
+                          Base para Proyecto IA
                         </h4>
                         <span className="text-sm text-blue-400">
                           Documento DOCX
@@ -299,17 +300,16 @@ export default function Recursos() {
                     </div>
                   </div>
                   <p className="text-gray-400 mb-4 flex-grow">
-                    Plantilla de proyecto para diligenciar con tu implementación
-                    de machine learning
+                    Plantilla de proyecto para diligenciar tu proyecto de IA
                   </p>
                   <a
-                    href="https://res.cloudinary.com/djrdozcdw/raw/upload/v1756053277/DIAPOS/Base_Proyecto_-_IA_BOOTCAMP_1_ozlegt.docx"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    Descargar Documento
+                    En proceso de actualización
                   </a>
                 </div>
               </div>

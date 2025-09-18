@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState, useRef } from "react";
 import {
   Brain,
   Users,
@@ -13,6 +16,95 @@ import {
 import Viewer360 from "./components/Viewer360";
 
 export default function Home() {
+  // Estados del carrusel
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const images = [
+    {
+      src: "https://res.cloudinary.com/djrdozcdw/image/upload/v1758206315/20250917_182210_adkatq.jpg",
+      title: "Salon de clases - IA Básico",
+      description: "Innovación en inteligencia artificial",
+    },
+    {
+      src: "https://res.cloudinary.com/djrdozcdw/image/upload/v1758206311/20250917_182152_g3hugs.jpg",
+      title: "Salon de clases - IA Básico",
+      description: "Innovación en inteligencia artificial",
+    },
+    {
+      src: "https://res.cloudinary.com/djrdozcdw/image/upload/v1758206311/20250917_182200_knpyb0.jpg",
+      title: "Salon de clases - IA Básico",
+      description: "Innovación en inteligencia artificial",
+    },
+    {
+      src: "https://res.cloudinary.com/djrdozcdw/image/upload/v1758206310/20250917_182205_sh3aep.jpg",
+      title: "Salon de clases - IA Básico",
+      description: "Innovación en inteligencia artificial",
+    },
+  ];
+
+  // Funciones de navegación del carrusel
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Autoplay del carrusel
+  useEffect(() => {
+    if (isPlaying) {
+      intervalRef.current = setInterval(nextSlide, 4000);
+    } else {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, [isPlaying]);
+
+  // Pausar autoplay en hover
+  const handleMouseEnter = () => setIsPlaying(false);
+  const handleMouseLeave = () => setIsPlaying(true);
+
+  // Soporte para gestos táctiles
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    }
+    if (isRightSwipe) {
+      prevSlide();
+    }
+  };
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -105,133 +197,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección de fotos del salón */}
-      <section className="py-20 bg-tech-dark/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-tech-purple-400 to-tech-cyan-400 bg-clip-text text-transparent">
-                Nuestro Salón de Clases
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Donde la magia de la IA cobra vida. Conoce a nuestros estudiantes
-              y el ambiente de aprendizaje.
-            </p>
-          </div>
+      <section className="py-16 bg-gradient-to-br from-purple-900/20 to-blue-900/20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Galería de Imagenes
+          </h2>
 
-          {/* Grid de fotos reales del salón */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Introducción a Python para IA",
-                description: "Primeros pasos en programación con Python",
-                image:
-                  "https://res.cloudinary.com/djrdozcdw/image/upload/v1755996310/20250806_162735_uzaw6b.jpg",
-              },
-              {
-                title: "Sesión con ChatBase",
-                description: "Explorando herramientas de IA conversacional",
-                image:
-                  "https://res.cloudinary.com/djrdozcdw/image/upload/v1755996307/20250811_152827_x1wjrp.jpg",
-              },
-              {
-                title: "Explicación de Cursor IDE",
-                description: "Trabajando con editores potenciados por IA",
-                image:
-                  "https://res.cloudinary.com/djrdozcdw/image/upload/v1755996305/20250808_163254_rgoia3.jpg",
-              },
-              {
-                title: "Despliegues ",
-                description: "Llevando nuestros proyectos de IA a producción",
-                image:
-                  "https://res.cloudinary.com/djrdozcdw/image/upload/v1755996301/20250811_152849_rtpp37.jpg",
-              },
-            ].map((item, index) => (
-              <div key={index} className="tech-card group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg mb-4">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={400}
-                    height={300}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-tech-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-400 text-sm">{item.description}</p>
+          {/* Carrusel de Imágenes */}
+          <div className="relative max-w-4xl mx-auto">
+            <div
+              className="carousel-container relative overflow-hidden rounded-2xl shadow-2xl"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <div
+                className="carousel-track flex transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="carousel-slide min-w-full relative"
+                  >
+                    <Image
+                      src={image.src}
+                      alt={`Proyecto ${index + 1}`}
+                      width={1200}
+                      height={400}
+                      className="w-full h-96 object-cover"
+                      loading={index === 0 ? "eager" : "lazy"}
+                      priority={index === 0}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 text-white">
+                      <h3 className="text-xl font-semibold">{image.title}</h3>
+                      <p className="text-gray-200">{image.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Controles de navegación */}
+            <button
+              onClick={prevSlide}
+              className="carousel-btn carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300 shadow-lg hover:scale-110"
+              aria-label="Imagen anterior"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={nextSlide}
+              className="carousel-btn carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm rounded-full p-3 text-white hover:bg-white/30 transition-all duration-300 shadow-lg hover:scale-110"
+              aria-label="Imagen siguiente"
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
+            {/* Indicadores */}
+            <div className="carousel-indicators flex justify-center space-x-2 mt-6">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`carousel-indicator w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 ${
+                    currentSlide === index
+                      ? "bg-white shadow-lg"
+                      : "bg-white/50 hover:bg-white/80"
+                  }`}
+                  aria-label={`Ir a imagen ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Sección de fotos del salón */}
 
       {/* Sección de vista 360° */}
-      <section className="py-20 bg-gradient-to-b from-tech-dark/30 to-tech-dark/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-tech-purple-400 to-tech-cyan-400 bg-clip-text text-transparent">
-                Recorrido Virtual 360°
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Sumérgete en nuestro espacio de aprendizaje. Explora cada rincón
-              de nuestro salón de clases con esta experiencia inmersiva de 360
-              grados.
-            </p>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <Viewer360
-              panoravenUrl="https://panoraven.com/es/embed/6Pif2811rO"
-              title="Vista Completa del Salón G113"
-            />
-          </div>
-
-          {/* Características del tour virtual */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-            <div className="tech-card text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-tech-purple-600 to-tech-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold">360°</span>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                Vista Completa
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Explora todo el salón girando en cualquier dirección
-              </p>
-            </div>
-
-            <div className="tech-card text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-tech-cyan-600 to-tech-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">🔍</span>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                Zoom Interactivo
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Acércate para ver los detalles de nuestro equipamiento
-              </p>
-            </div>
-
-            <div className="tech-card text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-tech-purple-600 to-tech-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-xl">🖱️</span>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                Controles Fáciles
-              </h3>
-              <p className="text-gray-400 text-sm">
-                Navega intuitivamente con el mouse o controles táctiles
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Sección de objetivos del curso */}
       <section className="py-20">

@@ -12,11 +12,11 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Proyectos Misión 1 | G113 - IA Básico",
+  title: "Proyectos Misión 1 | G123 - IA Básico",
   description:
     "5 proyectos increíbles de análisis de datos con Python y Pandas, frontends con IA desarrollados por campistas. Dashboard interactivos, e-commerce, tutelas y más.",
   openGraph: {
-    title: "🎯 Proyectos Misión 1 - Bootcamp IA G113",
+    title: "🎯 Proyectos Misión 1 - Bootcamp IA G123",
     description:
       "Descubre 5 proyectos increíbles: análisis educativo, e-commerce gaming, tutelas en salud, universidad virtual y asesor de autos. ¡Demos en vivo!",
     images: [
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Proyectos de IA - Misión 1 G113",
+        alt: "Proyectos de IA - Misión 1 G123",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "🎯 Proyectos Misión 1 - Bootcamp IA G113",
+    title: "🎯 Proyectos Misión 1 - Bootcamp IA G123",
     description:
       "5 proyectos increíbles con Python, Pandas y IA. Demos en vivo disponibles.",
     images: ["/logo.png"],

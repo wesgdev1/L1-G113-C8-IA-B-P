@@ -43,7 +43,7 @@ export default function Viewer360({
             `,
           }}
           src={panoravenUrl}
-          title="Vista 360° del Salón G113"
+          title="Vista 360° del Salón G123"
           className="border border-tech-purple-500/30"
         />
 

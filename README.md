@@ -1,6 +1,6 @@
-# G113 - Inteligencia Artificial Básico
+# G123 - Inteligencia Artificial Básico
 
-Sitio web del grupo G113 de Inteligencia Artificial Básico - Talento Tech cucuta.
+Sitio web del grupo G123 de Inteligencia Artificial Básico - Talento Tech cucuta.
 
 ## 🚀 Características
 
@@ -32,7 +32,7 @@ El sitio utiliza la paleta de colores de Talento Tech Cucuta:
 1. **Clona el repositorio**
 ```bash
 git clone <url-del-repositorio>
-cd G113-inteligencia-artificial
+cd G123-inteligencia-artificial
 ```
 
 2. **Instala las dependencias**
@@ -134,7 +134,7 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 ## 📞 Contacto
 
-**G113 - Inteligencia Artificial Básico**  
+**G123 - Inteligencia Artificial Básico**  
 Talento Tech Cucuta 
 Atlántico, César, La Guajira, Magdalena
 

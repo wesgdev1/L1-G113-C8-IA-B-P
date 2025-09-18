@@ -133,7 +133,7 @@ export default function Home() {
 
               <h1 className="text-5xl md:text-7xl font-bold">
                 <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  G113
+                  G123
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-tech-purple-400 to-tech-cyan-400 bg-clip-text text-transparent">

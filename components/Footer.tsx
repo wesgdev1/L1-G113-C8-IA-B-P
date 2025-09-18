@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-tech-purple-400 to-tech-cyan-400 bg-clip-text text-transparent">
-                  G113 - IA Básico
+                  G123 - IA Básico
                 </h3>
                 <p className="text-sm text-gray-400">Talento Tech Cucuta</p>
               </div>
@@ -90,10 +90,10 @@ const Footer = () => {
         <div className="border-t border-tech-purple-500/20 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 G113 Inteligencia Artificial Básico. Talento Tech Cucuta
+              © 2025 G123 Inteligencia Artificial Básico. Talento Tech Cucuta
             </p>
             <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Desarrollado con ❤️ para nuestros estudiantes G113 - IA Básico
+              Desarrollado con ❤️ para nuestros estudiantes G123 - IA Básico
             </p>
           </div>
         </div>

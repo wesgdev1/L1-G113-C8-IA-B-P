@@ -12,7 +12,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Recursos de Aprendizaje | G113 - IA Básico",
+  title: "Recursos de Aprendizaje | G123 - IA Básico",
   description:
     "Materiales de la Misión 1: diapositivas de fundamentos de IA, documentos para diligenciar, herramientas de IA y recursos para aprender fundamentos de IA.",
   openGraph: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Recursos de Machine Learning - G113",
+        alt: "Recursos de Machine Learning - G123",
       },
     ],
   },
@@ -109,7 +109,7 @@ export default function Recursos() {
           descripcion: "Colección completa de ejercicios prácticos",
           tipo: "Repositorio",
           lenguaje: "Python",
-          url: "https://github.com/G113-ia-basico/ejercicios",
+          url: "https://github.com/G123-ia-basico/ejercicios",
         },
         {
           titulo: "Plantillas de Proyectos",

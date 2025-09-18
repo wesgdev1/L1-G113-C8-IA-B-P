@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "G113 - Inteligencia Artificial Básico",
+  title: "G123 - Inteligencia Artificial Básico",
   description:
     "Bootcamp de IA con proyectos de análisis de datos, machine learning y frontends con IA. Misiones prácticas desarrolladas por campistas de Talento Tech Cucuta.",
   keywords: [
@@ -23,17 +23,17 @@ export const metadata: Metadata = {
     "Análisis de Datos",
     "Proyectos IA",
   ],
-  authors: [{ name: "G113 Talento Tech Cucuta" }],
-  creator: "G113 - Inteligencia Artificial Básico",
+  authors: [{ name: "G123 Talento Tech Cucuta" }],
+  creator: "G123 - Inteligencia Artificial Básico",
   publisher: "Talento Tech Cucuta",
 
   // Open Graph para WhatsApp, Facebook, LinkedIn
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://G113-inteligencia-artificial.vercel.app/",
-    siteName: "G113 - IA Básico",
-    title: "🚀 G113 - Bootcamp de Inteligencia Artificial",
+    url: "https://G123-inteligencia-artificial.vercel.app/",
+    siteName: "G123 - IA Básico",
+    title: "🚀 G123 - Bootcamp de Inteligencia Artificial",
     description:
       "Proyectos increíbles de IA: análisis de datos, machine learning y frontends inteligentes. Misión 1 y 2 completadas por campistas de Talento Tech.",
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "G113 - Bootcamp de Inteligencia Artificial",
+        alt: "G123 - Bootcamp de Inteligencia Artificial",
         type: "image/png",
       },
     ],
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
   // Twitter Cards
   twitter: {
     card: "summary_large_image",
-    title: "🚀 G113 - Bootcamp de Inteligencia Artificial",
+    title: "🚀 G123 - Bootcamp de Inteligencia Artificial",
     description:
       "Proyectos increíbles de IA: análisis de datos, machine learning y frontends inteligentes desarrollados por campistas.",
     images: ["/logo.png"],
-    creator: "@G113IA",
+    creator: "@G123IA",
   },
 
   // Robots y SEO

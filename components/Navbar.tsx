@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-tech-purple-400 to-tech-cyan-400 bg-clip-text text-transparent">
-                G113-IA
+                G123-IA
               </span>
               <span className="text-xs text-gray-400">Talento Tech</span>
             </div>

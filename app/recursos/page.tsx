@@ -303,13 +303,176 @@ export default function Recursos() {
                     Plantilla de proyecto para diligenciar tu proyecto de IA
                   </p>
                   <a
-                    href="#"
+                    href="https://drive.google.com/drive/folders/1cumkV2MLEEWGElzY6fkNs7rLZ76mj29y?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    En proceso de actualización
+                    Acceso al Drive
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-green-400 to-red-400 bg-clip-text text-transparent">
+                  Misión 2: Aplicacion de Machine Learning con Teachable Machine
+                </span>
+              </h3>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Materiales para aprender a usar Teachable Machine y crear
+                aplicaciones de IA
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Diapositivas */}
+              <div className="tech-card group hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">
+                          Recursos Misión 2
+                        </h4>
+                        <span className="text-sm text-orange-400">
+                          Acceso a google drive
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-400 mb-4 flex-grow">
+                    Materiales para aprender a usar Teachable Machine
+                  </p>
+                  <a
+                    href="https://drive.google.com/drive/folders/1UdFQR7XVXwD9ZRedY7iQTjALEqHIUywv?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/25"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Acceso a google drive
+                  </a>
+                </div>
+              </div>
+
+              {/* Documento a diligenciar */}
+              <div className="tech-card group hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">
+                          Base para Proyecto IA
+                        </h4>
+                        <span className="text-sm text-blue-400">
+                          Documento DOCX
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-400 mb-4 flex-grow">
+                    Plantilla de proyecto para diligenciar tu proyecto de IA
+                  </p>
+                  <a
+                    href="https://drive.google.com/drive/folders/1PetgorKqeAh0itoDTNiYd7bPI8-c9tGR?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Acceso al Drive
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">
+                <span className="bg-gradient-to-r from-red-400 to-red-400 bg-clip-text text-transparent">
+                  Misión 3: Automatizacion basica con n8n
+                </span>
+              </h3>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Materiales para aprender a usar n8n y automatizar tareas
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Diapositivas */}
+              <div className="tech-card group hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">
+                          Recursos Misión 3
+                        </h4>
+                        <span className="text-sm text-orange-400">
+                          Acceso a google drive
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-400 mb-4 flex-grow">
+                    Materiales para aprender a usar n8n
+                  </p>
+                  <a
+                    href="https://drive.google.com/drive/folders/1UdFQR7XVXwD9ZRedY7iQTjALEqHIUywv?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/25"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Acceso a google drive
+                  </a>
+                </div>
+              </div>
+
+              {/* Documento a diligenciar */}
+              <div className="tech-card group hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col h-full">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
+                        <FileText className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">
+                          Base para Proyecto IA
+                        </h4>
+                        <span className="text-sm text-blue-400">
+                          Documento DOCX
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-gray-400 mb-4 flex-grow">
+                    Plantilla de proyecto para diligenciar tu proyecto de IA
+                  </p>
+                  <a
+                    href="https://drive.google.com/drive/folders/1PetgorKqeAh0itoDTNiYd7bPI8-c9tGR?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Acceso al Drive
                   </a>
                 </div>
               </div>

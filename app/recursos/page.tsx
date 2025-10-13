@@ -433,7 +433,7 @@ export default function Recursos() {
                     Materiales para aprender a usar n8n
                   </p>
                   <a
-                    href="https://drive.google.com/drive/folders/1UdFQR7XVXwD9ZRedY7iQTjALEqHIUywv?usp=sharing"
+                    href="https://drive.google.com/drive/folders/1gQFH3a5BVA33rvlixL0Hj-ofEp2ZYY-U?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/25"
@@ -466,7 +466,7 @@ export default function Recursos() {
                     Plantilla de proyecto para diligenciar tu proyecto de IA
                   </p>
                   <a
-                    href="https://drive.google.com/drive/folders/1PetgorKqeAh0itoDTNiYd7bPI8-c9tGR?usp=drive_link"
+                    href="https://drive.google.com/drive/folders/1OOonfSCfiiGz11uok2LZRRkXve6mVNaA?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
